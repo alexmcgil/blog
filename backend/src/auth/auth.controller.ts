@@ -4,13 +4,13 @@ import { Controller, HttpCode, Post } from '@nestjs/common';
 export class AuthController {
 
     @Post('register')
-    async register() {
+    async register(@Body() dto: RegDto) {
 
     }
 
     @HttpCode(200)
     @Post('login')
-    async login() {
+    async login(@Body() dto: AuthDto) {
         
     }
 }
